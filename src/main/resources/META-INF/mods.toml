@@ -1,0 +1,12 @@
+modLoader="kotori_scala"
+loaderVersion="[2.13.3,)"
+license="MIT"
+[[mods]]
+modId="randore"
+version="1.4.1"
+displayName="Rand'Ore"
+logoFile="logo.png"
+credits=""
+authors="Peakstep, Tapio"
+description='''
+'''

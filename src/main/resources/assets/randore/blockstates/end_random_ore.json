@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "randore:block/end_random_ore" }
+  }
+}

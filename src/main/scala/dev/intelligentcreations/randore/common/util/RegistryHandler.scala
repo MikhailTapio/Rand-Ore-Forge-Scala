@@ -2,7 +2,6 @@ package dev.intelligentcreations.randore.common.util
 
 import dev.intelligentcreations.randore.common.RandOre
 import dev.intelligentcreations.randore.common.block.BlockInit
-import dev.intelligentcreations.randore.common.block.blockItem.ItemInit
 import dev.intelligentcreations.randore.common.config.OreGenConfig
 import net.minecraft.world.item.Item
 import net.minecraft.world.level.block.Block
@@ -18,7 +17,6 @@ object RegistryHandler {
   val eventBus: IEventBus = FMLJavaModLoadingContext.get().getModEventBus
   def register(): Unit = {
     BlockInit.register()
-    ItemInit.register()
     Blocks.register(eventBus)
     Items.register(eventBus)
     ModLoadingContext.get.registerConfig(ModConfig.Type.COMMON, OreGenConfig.COMMON_CONFIG)

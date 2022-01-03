@@ -25,6 +25,11 @@ object BlockInit {
     deepslateRandomOre = initOreBlock(DEEPSLATE, SoundType.DEEPSLATE, 6)
     netherRandomOre = initOreBlock(NETHER, SoundType.NETHER_ORE, 3)
     endRandomOre = initOreBlock(END, SoundType.STONE, 5)
+    //blockItems
+    val iCommon = initOreBlockItem(COMMON, randomOre)
+    val iDeepslate = initOreBlockItem(DEEPSLATE, deepslateRandomOre)
+    val iNether = initOreBlockItem(NETHER, netherRandomOre)
+    val iEnd = initOreBlockItem(END, endRandomOre)
   }
   final def initOreBlock(name:String, soundType: SoundType, strength:Int): RegistryObject[Block] = {
     RegistryHandler.Blocks.register(name,

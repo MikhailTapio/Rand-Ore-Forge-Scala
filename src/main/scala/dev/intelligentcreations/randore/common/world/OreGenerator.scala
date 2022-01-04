@@ -26,14 +26,12 @@ object OreGenerator {
     if (event.getCategory eq Biome.BiomeCategory.THEEND) {
       genOre(event.getGeneration, END_STONE_ORE_REPLACEABLES, endRandomOre.get().defaultBlockState(), END_R_SIZE.get(), END_R_MIN.get(), END_R_MAX.get(), END_R_VEIN.get())
     }
+    else if (event.getCategory eq Biome.BiomeCategory.NETHER) {
+      genOre(event.getGeneration, NETHER_ORE_REPLACEABLES, netherRandomOre.get().defaultBlockState(), NETHER_R_SIZE.get(), NETHER_R_MIN.get(), NETHER_R_MAX.get(), NETHER_R_VEIN.get())
+    }
     else {
-      if (event.getCategory eq Biome.BiomeCategory.NETHER) {
-        genOre(event.getGeneration, NETHER_ORE_REPLACEABLES, netherRandomOre.get().defaultBlockState(), NETHER_R_SIZE.get(), NETHER_R_MIN.get(), NETHER_R_MAX.get(), NETHER_R_VEIN.get())
-      }
-      else {
-        genOre(event.getGeneration, STONE_ORE_REPLACEABLES, randomOre.get().defaultBlockState(), COMMON_R_SIZE.get(), COMMON_R_MIN.get(), COMMON_R_MAX.get(), COMMON_R_VEIN.get())
-        genOre(event.getGeneration, DEEPSLATE_ORE_REPLACEABLES, deepslateRandomOre.get().defaultBlockState(), DEEPSLATE_R_SIZE.get(), DEEPSLATE_R_MIN.get(), DEEPSLATE_R_MAX.get(), DEEPSLATE_R_VEIN.get())
-      }
+      genOre(event.getGeneration, STONE_ORE_REPLACEABLES, randomOre.get().defaultBlockState(), COMMON_R_SIZE.get(), COMMON_R_MIN.get(), COMMON_R_MAX.get(), COMMON_R_VEIN.get())
+      genOre(event.getGeneration, DEEPSLATE_ORE_REPLACEABLES, deepslateRandomOre.get().defaultBlockState(), DEEPSLATE_R_SIZE.get(), DEEPSLATE_R_MIN.get(), DEEPSLATE_R_MAX.get(), DEEPSLATE_R_VEIN.get())
     }
   }
 

@@ -6,7 +6,5 @@ modId="randore"
 version="1.4.1"
 displayName="Rand'Ore"
 logoFile="logo.png"
-credits=""
 authors="Peakstep, Tapio"
-description='''
-'''
+description=""

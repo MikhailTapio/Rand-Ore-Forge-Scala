@@ -15,7 +15,7 @@ object RegistryHandler {
   val Blocks: DeferredRegister[Block] = DeferredRegister.create(ForgeRegistries.BLOCKS, RandOre.MOD_ID)
   val Items: DeferredRegister[Item] = DeferredRegister.create(ForgeRegistries.ITEMS, RandOre.MOD_ID)
   val eventBus: IEventBus = FMLJavaModLoadingContext.get().getModEventBus
-  def register(): Unit = {
+  final def register(): Unit = {
     BlockInit.register()
     Blocks.register(eventBus)
     Items.register(eventBus)

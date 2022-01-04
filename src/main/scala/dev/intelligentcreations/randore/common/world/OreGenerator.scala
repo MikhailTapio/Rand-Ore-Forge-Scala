@@ -22,7 +22,7 @@ import java.util
 @Mod.EventBusSubscriber
 object OreGenerator {
   val END_STONE_ORE_REPLACEABLES = new TagMatchTest(Tags.Blocks.END_STONES)
-  @SubscribeEvent def oreGeneration(event: BiomeLoadingEvent): Unit = {
+  @SubscribeEvent final def oreGeneration(event: BiomeLoadingEvent): Unit = {
     if (event.getCategory eq Biome.BiomeCategory.THEEND) {
       genOre(event.getGeneration, END_STONE_ORE_REPLACEABLES, endRandomOre.get().defaultBlockState(), END_R_SIZE.get(), END_R_MIN.get(), END_R_MAX.get(), END_R_VEIN.get())
     }
@@ -37,7 +37,7 @@ object OreGenerator {
     }
   }
 
-  private def genOre(settings: BiomeGenerationSettingsBuilder, fillerType: RuleTest, state: BlockState, veinSize: Int, minHeight: Int, maxHeight: Int, maxperchunk: Int): Unit = {
+  private final def genOre(settings: BiomeGenerationSettingsBuilder, fillerType: RuleTest, state: BlockState, veinSize: Int, minHeight: Int, maxHeight: Int, maxperchunk: Int): Unit = {
     settings.addFeature(GenerationStep.Decoration.UNDERGROUND_ORES,
       Feature.ORE.configured(new OreConfiguration(fillerType, state, veinSize)).
         placed(util.List.of(CountPlacement.of(UniformInt.of(0, maxperchunk)),
